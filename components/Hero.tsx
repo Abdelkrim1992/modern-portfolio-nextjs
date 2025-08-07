@@ -1,17 +1,30 @@
-import React from 'react'
-import { Spotlight } from './ui/Spotlight'
-import { GridBackgroundDemo } from './ui/GridBackground'
+import React from 'react';
+import { Spotlight } from './ui/Spotlight';
+import { GridBackgroundDemo } from './ui/GridBackground';
 
 export const Hero = () => {
-    return (
-        <div className='pb-10 pt-10'>
-            <div>
-                <Spotlight className="-top-40 -left-10 md:-left-32 sm:-top-45 sm:-left-32 md:-top-30 h-screen" fill='white'/>
-                <Spotlight className="top-28 left-full h-[80vh] w-[50vw]" fill='purple'/>
-                <Spotlight className="top- left-80 h-[80vh] w-[50vw]" fill='blue'/>
-                <GridBackgroundDemo />
-            </div>
-            
-        </div>
-    )
-}
+  return (
+    <div className="pt-10 overflow-hidden">
+      {/* White spotlight - centered and large */}
+      <Spotlight
+        className="absolute top-[10%] left-[10%] h-[80vh] w-[80vw]"
+        fill="white"
+      />
+
+      {/* Blue spotlight - same position for overlay effect */}
+      <Spotlight
+        className="absolute top-[10%] left-[10%] h-[120vh] w-[120vw]"
+        fill="blue"
+      />
+
+      {/* Purple spotlight - offset to right for contrast */}
+      <Spotlight
+        className="absolute top-[30%] left-[80%] h-[120vh] w-[60vw]"
+        fill="purple"
+      />
+
+      {/* Main hero content */}
+      <GridBackgroundDemo />
+    </div>
+  );
+};
