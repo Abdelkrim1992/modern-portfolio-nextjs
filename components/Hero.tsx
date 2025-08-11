@@ -4,7 +4,7 @@ import { GridBackgroundDemo } from './ui/GridBackground';
 
 export const Hero = () => {
   return (
-    <div className="pt-10 overflow-hidden">
+    <div className="overflow-hidden">
       {/* White spotlight - centered and large */}
       <Spotlight
         className="absolute top-[10%] left-[10%] h-[80vh] w-[80vw]"
