@@ -1,5 +1,7 @@
 import React from "react";
 import { TextGenerateEffect } from "./text-generate-effect";
+import ButtonTailwindcss from "./ButtonTailwindcss";
+import { FaLocationArrow } from "react-icons/fa";
 
 export function GridBackgroundDemo() {
   return (
@@ -19,10 +21,13 @@ export function GridBackgroundDemo() {
           <h1 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-[80vw]">
             Watch New Modern Portfolio
           </h1>
-          <TextGenerateEffect className="text-center text-[40px] md:text-5xl lg:text-6xl" words="Transfer Progects To Modern Ui Designs"/>
+          <TextGenerateEffect className="text-center text-[40px] md:text-5xl lg:text-5xl" words="Turning Ideas into Scalable Web Applications"/>
           <p className="text-center justify-center flex tracking-wider mb-5 text-sm md:text-lg ">
-          I'm Abdelkrim Salaghe a Full Stack Developer based in Agadir, Morocco
-        </p>
+            I'm Abdelkrim Salaghe a Full Stack Developer based in Agadir, Morocco
+          </p>
+          <a href="#about" className="flex justify-center pt-3 ">
+            <ButtonTailwindcss title="Explore More" icon={<FaLocationArrow/>}/>
+          </a>
         </div>
         
       </div>
