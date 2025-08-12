@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ClipboardData } from "@/data/index";
+import { ClipboardData } from "../../data/index";
 
 export default function CopyToClipboard({text}: {text: string}) {
     // Initial text
@@ -53,7 +53,7 @@ export default function CopyToClipboard({text}: {text: string}) {
             <span id="success-message" className="hidden">
                 <span className="inline-flex items-center">
                     <svg className="w-3 h-3 text-blue-700 dark:text-blue-500 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5.917 5.724 10.5 15 1.5"/>
                     </svg>
                     <span className="text-xs font-semibold text-blue-700 dark:text-blue-500">{isCopiedText}</span>
                 </span>
