@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ClipboardData } from "../../data/index";
+import { ClipboardData } from "@/data";
 
 export default function CopyToClipboard({text}: {text: string}) {
     // Initial text
