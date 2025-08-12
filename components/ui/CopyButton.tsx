@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { ClipboardData } from "@/data";
+import { clipboardConfig } from "@/lib/clipboard-config";
 
 export default function CopyToClipboard({text}: {text: string}) {
     // Initial text
-  const [textToCopy, setTextToCopy] = useState(ClipboardData.value); 
+  const [textToCopy, setTextToCopy] = useState(clipboardConfig.value); 
    // State to manage copied effect
   const [isCopied, setIsCopied] = useState(false);
-  const [isCopiedText, setIsCopiedText] = useState(ClipboardData.copiedText);
+  const [isCopiedText, setIsCopiedText] = useState(clipboardConfig.copiedText);
   // State to manage notification visibility
   const [showNotification, setShowNotification] = useState(false); 
 
