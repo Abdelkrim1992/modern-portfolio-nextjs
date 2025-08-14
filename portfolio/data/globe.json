@@ -1,0 +1,14 @@
+{
+  "places": [
+    { "name": "New York", "lat": 40.7128, "lng": -74.0060, "size": 0.5, "color": "#ffffff" },
+    { "name": "London", "lat": 51.5074, "lng": -0.1278, "size": 0.5, "color": "#ffffff" },
+    { "name": "Tokyo", "lat": 35.6762, "lng": 139.6503, "size": 0.5, "color": "#ffffff" },
+    { "name": "Sydney", "lat": -33.8688, "lng": 151.2093, "size": 0.5, "color": "#ffffff" },
+    { "name": "Rio de Janeiro", "lat": -22.9068, "lng": -43.1729, "size": 0.5, "color": "#ffffff" },
+    { "name": "Cape Town", "lat": -33.9249, "lng": 18.4241, "size": 0.5, "color": "#ffffff" },
+    { "name": "Moscow", "lat": 55.7558, "lng": 37.6173, "size": 0.5, "color": "#ffffff" },
+    { "name": "Beijing", "lat": 39.9042, "lng": 116.4074, "size": 0.5, "color": "#ffffff" },
+    { "name": "Mumbai", "lat": 19.0760, "lng": 72.8777, "size": 0.5, "color": "#ffffff" },
+    { "name": "Cairo", "lat": 30.0444, "lng": 31.2357, "size": 0.5, "color": "#ffffff" }
+  ]
+}
