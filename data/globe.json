@@ -1,0 +1,14 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "World"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": []
+      }
+    }
+  ]
+}
