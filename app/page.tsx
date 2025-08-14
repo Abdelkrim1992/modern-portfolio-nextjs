@@ -1,6 +1,7 @@
 import BentoGridDemo from "@/components/ui/Grid";
 import { Hero } from "../components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { GlobeDemo } from "@/components/ui/GridGlobe";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         ]}/>
         <Hero/> 
         <BentoGridDemo />
+        <GlobeDemo />
       </div>
     </main>
   );

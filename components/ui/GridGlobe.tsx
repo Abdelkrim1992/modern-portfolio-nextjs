@@ -6,7 +6,8 @@ import dynamic from "next/dynamic";
 // Import the World component with SSR disabled
 const GlobeWorld = dynamic(() => import("./Globe").then(mod => ({ default: mod.World })), {
   ssr: false,
-  loading: () => <div className="h-full w-full flex items-center justify-center">Loading globe...</div>
+  loading: () => <div className="h-full w-full flex items-center justify-center">Loading globe...</div>,
+  suspense: true
 });
 
 export function GlobeDemo() {

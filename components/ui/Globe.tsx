@@ -225,49 +225,33 @@ export function Globe({ globeConfig, data }: WorldProps) {
   return <group ref={groupRef} />;
 }
 
-export function WebGLRendererConfig() {
-  const { gl, size } = useThree();
-
-  useEffect(() => {
-    gl.setPixelRatio(window.devicePixelRatio);
-    gl.setSize(size.width, size.height);
-    gl.setClearColor(0xffaaff, 0);
-  }, [gl, size]);
-
-  return null;
-}
+// This function is no longer needed as we're using Canvas props
+// export function WebGLRendererConfig() {
+//   const { gl, size } = useThree();
+//
+//   useEffect(() => {
+//     gl.setPixelRatio(window.devicePixelRatio);
+//     gl.setSize(size.width, size.height);
+//     gl.setClearColor(0xffaaff, 0);
+//   }, [gl, size]);
+//
+//   return null;
+// }
 
 export function World(props: WorldProps) {
   const { globeConfig } = props;
   
   return (
-    <Canvas camera={{ fov: 50, aspect, near: 180, far: 1800, position: [0, 0, cameraZ] }}>
-      <fog attach="fog" args={['#ffffff', 400, 2000]} />
-      <WebGLRendererConfig />
-      <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
-      <directionalLight
-        color={globeConfig.directionalLeftLight}
-        position={new Vector3(-400, 100, 400)}
-      />
-      <directionalLight
-        color={globeConfig.directionalTopLight}
-        position={new Vector3(-200, 500, 200)}
-      />
-      <pointLight
-        color={globeConfig.pointLight}
-        position={new Vector3(-200, 500, 200)}
-        intensity={0.8}
-      />
+    <Canvas dpr={[1, 2]} camera={{ position: [0, 0, cameraZ], fov: 50 }}>
+      <color attach="background" args={['#000']} />
+      <ambientLight intensity={0.6} />
+      <directionalLight position={[-10, 10, 5]} intensity={0.6} />
       <Globe {...props} />
-      <OrbitControls
+      <OrbitControls 
         enablePan={false}
         enableZoom={false}
-        minDistance={cameraZ}
-        maxDistance={cameraZ}
-        autoRotateSpeed={1}
-        autoRotate={true}
-        minPolarAngle={Math.PI / 3.5}
-        maxPolarAngle={Math.PI - Math.PI / 3}
+        autoRotate
+        autoRotateSpeed={0.5}
       />
     </Canvas>
   );
