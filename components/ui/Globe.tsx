@@ -2,16 +2,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
-import { useThree, Object3DNode, Canvas, extend } from "@react-three/fiber";
+import { useThree, Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "@/data/globe.json";
-declare module "@react-three/fiber" {
-  interface ThreeElements {
-    threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
-  }
-}
-
-extend({ ThreeGlobe });
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1.2;
@@ -73,6 +66,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
   >(null);
 
   const globeRef = useRef<ThreeGlobe | null>(null);
+  const groupRef = useRef<any>(null);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   const defaultProps = {
     pointSize: 1,
@@ -91,12 +86,28 @@ export function Globe({ globeConfig, data }: WorldProps) {
     ...globeConfig,
   };
 
+  // Initialize globe only once
   useEffect(() => {
-    if (globeRef.current) {
+    if (!globeRef.current && groupRef.current) {
+      try {
+        globeRef.current = new ThreeGlobe();
+        if (groupRef.current) {
+          groupRef.current.add(globeRef.current);
+          setIsInitialized(true);
+        }
+      } catch (error) {
+        console.error("Error initializing globe:", error);
+      }
+    }
+  }, []);
+
+  // Build data when globe is initialized
+  useEffect(() => {
+    if (globeRef.current && isInitialized) {
       _buildData();
       _buildMaterial();
     }
-  }, [globeRef.current]);
+  }, [isInitialized]);
 
   const _buildMaterial = () => {
     if (!globeRef.current) return;
@@ -149,20 +160,24 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
-    if (globeRef.current && globeData) {
-      globeRef.current
-        .hexPolygonsData(countries.features)
-        .hexPolygonResolution(3)
-        .hexPolygonMargin(0.7)
-        .showAtmosphere(defaultProps.showAtmosphere)
-        .atmosphereColor(defaultProps.atmosphereColor)
-        .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor((e) => {
-          return defaultProps.polygonColor;
-        });
-      startAnimation();
+    if (globeRef.current && globeData && isInitialized) {
+      try {
+        globeRef.current
+          .hexPolygonsData(countries.features)
+          .hexPolygonResolution(3)
+          .hexPolygonMargin(0.7)
+          .showAtmosphere(defaultProps.showAtmosphere)
+          .atmosphereColor(defaultProps.atmosphereColor)
+          .atmosphereAltitude(defaultProps.atmosphereAltitude)
+          .hexPolygonColor((e) => {
+            return defaultProps.polygonColor;
+          });
+        startAnimation();
+      } catch (error) {
+        console.error("Error setting up globe data:", error);
+      }
     }
-  }, [globeData]);
+  }, [globeData, isInitialized]);
 
   const startAnimation = () => {
     if (!globeRef.current || !globeData) return;
@@ -203,31 +218,31 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
-    if (!globeRef.current || !globeData) return;
+    if (!globeRef.current || !globeData || !isInitialized) return;
 
     const interval = setInterval(() => {
       if (!globeRef.current || !globeData) return;
-      numbersOfRings = genRandomNumbers(
-        0,
-        data.length,
-        Math.floor((data.length * 4) / 5)
-      );
+      try {
+        numbersOfRings = genRandomNumbers(
+          0,
+          data.length,
+          Math.floor((data.length * 4) / 5)
+        );
 
-      globeRef.current.ringsData(
-        globeData.filter((d, i) => numbersOfRings.includes(i))
-      );
+        globeRef.current.ringsData(
+          globeData.filter((d, i) => numbersOfRings.includes(i))
+        );
+      } catch (error) {
+        console.error("Error updating rings:", error);
+      }
     }, 2000);
 
     return () => {
       clearInterval(interval);
     };
-  }, [globeRef.current, globeData]);
+  }, [globeData, isInitialized]);
 
-  return (
-    <>
-      <threeGlobe ref={globeRef} />
-    </>
-  );
+  return <group ref={groupRef} />;
 }
 
 export function WebGLRendererConfig() {
@@ -244,10 +259,9 @@ export function WebGLRendererConfig() {
 
 export function World(props: WorldProps) {
   const { globeConfig } = props;
-  const scene = new Scene();
-  scene.fog = new Fog(0xffffff, 400, 2000);
   return (
-    <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
+    <Canvas camera={{ fov: 50, near: 180, far: 1800, position: [0, 0, cameraZ] }}>
+      <fog attach="fog" args={[0xffffff, 400, 2000]} />
       <WebGLRendererConfig />
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight
