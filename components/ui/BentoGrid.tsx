@@ -1,8 +1,10 @@
+"use client";
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 import { cn } from "@/lib/utils";
 
@@ -23,7 +25,7 @@ export const BentoGrid = ({
     <div
       className={cn(
         // change gap-4 to gap-8, change grid-cols-3 to grid-cols-5, remove md:auto-rows-[18rem], add responsive code
-        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
+        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-4 gap-4 lg:gap-8 mx-auto ",
         className
       )}
     >
@@ -52,8 +54,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const leftLists = ["NextJS", "ReactJS", "Typescript"];
+  const rightLists = ["VueJS", "Laravel", "PHP"];
 
   const [copied, setCopied] = useState(false);
 
@@ -67,16 +69,18 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+    const text = "abdelkrimsalaghe@gmail.com";
+    if (typeof window !== 'undefined' && navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+      setCopied(true);
+    }
   };
 
   return (
     <div
       className={cn(
         // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
@@ -170,7 +174,7 @@ export const BentoGridItem = ({
             </div>
           )}
           {id === 6 && (
-            <div className="mt-5 relative">
+            <div className="relative">
               {/* button border magic from tailwind css buttons  */}
               {/* add rounded-md h-8 md:h-8, remove rounded-full */}
               {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
