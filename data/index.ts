@@ -49,7 +49,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently building an AI SaaS solution platform",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -106,34 +106,30 @@ export const projects = [
 
 export const testimonials = [
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    quote: "Working with Abdelkrim exceeded all my expectations. His technical expertise combined with creative vision transformed our outdated platform into a modern, user-friendly experience. The attention to detail and commitment to meeting deadlines made this collaboration seamless. I wouldn't hesitate to recommend Abdelkrim for any web development project.",
+    name: "Sarah Chen",
+    title: "CEO of InnovateTech Solutions",
+  },
+  
+  {
+    quote: "Working with Abdelkrim exceeded all my expectations. His technical expertise combined with creative vision transformed our outdated platform into a modern, user-friendly experience. The attention to detail and commitment to meeting deadlines made this collaboration seamless. I wouldn't hesitate to recommend Abdelkrim for any web development project.",
+    name: "Sarah Chen",
+    title: "CEO of InnovateTech Solutions",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    quote: "Working with Abdelkrim exceeded all my expectations. His technical expertise combined with creative vision transformed our outdated platform into a modern, user-friendly experience. The attention to detail and commitment to meeting deadlines made this collaboration seamless. I wouldn't hesitate to recommend Abdelkrim for any web development project.",
+    name: "Sarah Chen",
+    title: "CEO of InnovateTech Solutions",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    quote: "Working with Abdelkrim exceeded all my expectations. His technical expertise combined with creative vision transformed our outdated platform into a modern, user-friendly experience. The attention to detail and commitment to meeting deadlines made this collaboration seamless. I wouldn't hesitate to recommend Abdelkrim for any web development project.",
+    name: "Sarah Chen",
+    title: "CEO of InnovateTech Solutions",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    quote: "Working with Abdelkrim exceeded all my expectations. His technical expertise combined with creative vision transformed our outdated platform into a modern, user-friendly experience. The attention to detail and commitment to meeting deadlines made this collaboration seamless. I wouldn't hesitate to recommend Abdelkrim for any web development project.",
+    name: "Sarah Chen",
+    title: "CEO of InnovateTech Solutions",
   },
 ];
 
@@ -141,7 +137,7 @@ export const companies = [
   {
     id: 1,
     name: "cloudinary",
-    img: "/cloud.svg",
+    img: "https://html.tailus.io/blocks/customers/nvidia.svg",
     nameImg: "/cloudName.svg",
   },
   {
@@ -174,30 +170,18 @@ export const workExperience = [
   {
     id: 1,
     title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    desc: "I assisted in building a web-based platform with React.js and Redux, incorporating API integrations that enhanced user interactivity by 45%. I integrated RESTful APIs for seamless service communication, optimized application performance, and created technical documentation while collaborating on team project management",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Full Stack Developer Intern",
+    desc: [
+      "I designed and developed user interfaces using Vue.js and Laravel, improving application performance by 30%. I focused on user experience, integrated RESTful APIs, implemented Pinia Store for state management, optimized MySQL databases, and configured automated CI/CD pipelines with Docker.",
+    ],
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
   },
 ];
 
@@ -205,13 +189,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/abdelkrim1992",
   },
   {
     id: 2,
     img: "/twit.svg",
+    link: "https://x.com/abdelkrimsalaghe",
   },
   {
     id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/abdelkrim-salaghe/",
   },
 ];
