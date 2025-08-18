@@ -5,12 +5,12 @@ import { Button } from "./ui/MovingBorders";
 
 const Experience = () => {
   return (
-    <div className="py-10 w-full">
+    <div className="py-15 w-full justify-center items-center">
       <h1 className="heading">
         My <span className="text-purple">work experience</span>
       </h1>
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
+      <div className="py-[5rem] pl-[8rem] grid lg:grid-cols-[30rem_30rem] grid-cols-1 gap-10">
         {workExperience.map((card) => (
           <Button
             key={card.id}
@@ -27,7 +27,7 @@ const Experience = () => {
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
             // remove bg-white dark:bg-slate-900
-            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+            className="text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
               <img
@@ -40,7 +40,14 @@ const Experience = () => {
                   {card.title}
                 </h1>
                 <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
+                  {Array.isArray(card.desc)
+                    ? card.desc.map((line: string, idx: number) => (
+                        <React.Fragment key={idx}>
+                          {line}
+                          {idx !== card.desc.length - 1 && <br />}
+                        </React.Fragment>
+                      ))
+                    : card.desc}
                 </p>
               </div>
             </div>
