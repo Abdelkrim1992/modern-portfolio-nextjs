@@ -72,11 +72,11 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://earth-3d-simulation.vercel.app/",
+    title: "Evently - Event Management Platform",
+    des: "Modern event management platform built with Next.js frontend and Node.js backend that enables seamless event creation, ticketing, and attendee management.",
+    img: "/evently.png",
+    iconLists: ["/next.svg","/re.svg", "/tail.svg", "/c.svg"],
+    link: "https://evently-organization.vercel.app/",
   },
   {
     id: 2,
@@ -96,11 +96,11 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+    title: "Digital Marketing Management Platform",
+    des: "Full-stack web application built with Laravel for digital marketing agencies to manage client campaigns and track performance metrics..",
     img: "/digital_marketing.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://apple-iphone-3d-website.vercel.app/",
+    link: "",
   },
 ];
 
