@@ -72,9 +72,9 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Evently - Event Management Platform",
-    des: "Modern event management platform built with Next.js frontend and Node.js backend that enables seamless event creation, ticketing, and attendee management.",
-    img: "/evently.png",
+    title: "Evently - Event Management SaaS",
+    des: "Modern event management SaaS built with Next.js frontend and Node.js backend that enables seamless event creation, ticketing, and attendee management.",
+    img: "/evently.PNG",
     iconLists: ["/next.svg","/re.svg", "/tail.svg", "/c.svg"],
     link: "https://evently-organization.vercel.app/",
   },
