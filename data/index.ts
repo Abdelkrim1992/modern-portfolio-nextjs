@@ -71,7 +71,7 @@ export const gridItems = [
 
 export const projects = [
   {
-    id: 1,
+    id: 3,
     title: "Evently - Event Management SaaS",
     des: "Modern event management SaaS built with Next.js frontend and Node.js backend that enables seamless event creation, ticketing, and attendee management.",
     img: "/evently.PNG",
@@ -87,19 +87,19 @@ export const projects = [
     link: "https://yoom-video-conferencing-app.vercel.app/",
   },
   {
-    id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
+    id: 1,
+    title: "Contevo AI - AI SaaS Content Tools",
+    des: "A REAL Software-as-a-Service app with AI content tools features and a payments and credits system using the latest tech stack.",
+    img: "/ai-saas-tools.webp",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://aiimg-saas.vercel.app/",
+    link: "https://contevo-ai.vercel.app/",
   },
   {
     id: 4,
     title: "Digital Marketing Management Platform",
     des: "Full-stack web application built with Laravel for digital marketing agencies to manage client campaigns and track performance metrics..",
     img: "/digital_marketing.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    iconLists: ["/laravel.svg", "/php.svg", "/mysql.svg", "/javascript.svg"],
     link: "",
   },
 ];
