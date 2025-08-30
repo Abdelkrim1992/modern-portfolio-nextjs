@@ -89,7 +89,7 @@ export const projects = [
   {
     id: 1,
     title: "Contevo AI - AI SaaS Content Tools",
-    des: "A REAL Software-as-a-Service app with AI content tools features and a payments and credits system using the latest tech stack.",
+    des: "A real Saas web application with AI content tools features and a payments and credits system using the latest tech stack.",
     img: "/ai-saas-tools.webp",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://contevo-ai.vercel.app/",
