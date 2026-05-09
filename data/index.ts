@@ -72,15 +72,22 @@ export const gridItems = [
 export const projects = [
   {
     id: 3,
-    title: "Evently - Event Management SaaS",
-    des: "Modern event management SaaS built with Next.js frontend and Node.js backend that enables seamless event creation, ticketing, and attendee management.",
+    title: "Ai Generation Tools - Modern SaaS",
+    des: "Modern ai generation tool SaaS built with Next.js frontend and Node.js backend that enables creation of images and video via prompts",
     img: "/evently.PNG",
     iconLists: ["/next.svg","/re.svg", "/tail.svg", "/c.svg"],
     link: "https://evently-organization.vercel.app/",
   },
   {
+    id: 3,
+    title: "Real Estate Agency Platform",
+    des: "Modern real estate agency platform built with Next.js frontend and Node.js backend ",
+    iconLists: ["/next.svg","/re.svg", "/tail.svg", "/c.svg"],
+    link: "https://evently-organization.vercel.app/",
+  },
+  {
     id: 2,
-    title: "Yoom - Video Conferencing App",
+    title: "Car Rental Agency Platform",
     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
