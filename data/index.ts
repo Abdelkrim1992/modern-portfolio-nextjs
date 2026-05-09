@@ -80,8 +80,8 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Real Estate Agency Platform",
-    des: "Modern real estate agency platform built with Next.js frontend and Node.js backend ",
+    title: "Real Estate Agency Website",
+    des: "Modern real estate agency website built with Next.js frontend and Node.js backend ",
     img: "/real-estate.PNG",
     iconLists: ["/next.svg","/re.svg", "/tail.svg", "/c.svg"],
     link: "https://estatix-real-estate.netlify.app/",
