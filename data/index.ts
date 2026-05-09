@@ -116,7 +116,7 @@ export const projects = [
     des: "A real Saas web application with AI content tools features and a payments and credits system using the latest tech stack.",
     img: "/ai-content-tools.PNG",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://contevo-ai.vercel.app/",
+    link: "https://contevo-ai.netlify.app/",
   },
   {
     id: 7,
@@ -132,7 +132,7 @@ export const projects = [
     des: "Modern ai generation tool SaaS built with Next.js frontend and Node.js backend that enables users to create resumes using AI.",
     img: "/ai-resume-builder.PNG",
     iconLists: ["/laravel.svg", "/php.svg", "/mysql.svg", "/javascript.svg"],
-    link: "",
+    link: "https://resumer-builder-ai.netlify.app/",
   },
 ];
 
