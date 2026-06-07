@@ -92,7 +92,7 @@ export const projects = [
     des: "Online car booking platform with a user-friendly interface, secure payment gateway, and a wide selection of vehicles to choose from.",
     img: "/luxury-car-rental.PNG",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://car.trivestudio.com/luxury",
+    link: "https://rentalcarluxury.netlify.app/luxury",
   },
   {
     id: 4,
@@ -108,7 +108,7 @@ export const projects = [
     des: "Online car booking platform with a user-friendly interface, secure payment gateway, and a wide selection of vehicles to choose from.",
     img: "/premium-car-rental.PNG",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://rentalcar.trivestudio.com/classic",
+    link: "https://rentalcarluxury.netlify.app/classic",
   },
   {
     id: 6,
