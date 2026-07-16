@@ -71,17 +71,26 @@ export const gridItems = [
 
 export const projects = [
   {
-    id: 1,
-    title: "Ai Generation Tools Platform",
-    des: "Modern ai generation tool SaaS built with Next.js frontend and Node.js backend that enables creation of images and video via prompts",
-    img: "/ai-generation-saas-tools.PNG",
-    iconLists: ["/next.svg","/re.svg", "/tail.svg", "/c.svg"],
-    link: "https://atlas-ai-generation.netlify.app/",
+    id: 0,
+    title: "CRM System Dashboard",
+    des: "A powerful CRM system built with a monolith modular architecture using NestJS, Next.js, PostgreSQL, and Redis for caching.",
+    img: "/crm-dashboard.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/re.svg"],
+    link: "https://crm-dashboard-1-hnzt.onrender.com/login",
+  },
+  
+  {
+    id: 6,
+    title: "Contevo AI - AI SaaS Content Tools",
+    des: "A real Saas web application with AI content tools features and a payments and credits system using the latest tech stack.",
+    img: "/ai-content-tools.PNG",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    link: "https://contevo-ai.netlify.app/",
   },
   {
     id: 2,
-    title: "Real Estate Agency Website",
-    des: "Modern real estate agency website built with Next.js frontend and Node.js backend ",
+    title: "Real Estate Agency Landing Page",
+    des: "Modern real estate agency landing page built with Next.js frontend and Node.js backend.",
     img: "/real-estate.PNG",
     iconLists: ["/next.svg","/re.svg", "/tail.svg", "/c.svg"],
     link: "https://estatix-real-estate.netlify.app/",
@@ -95,14 +104,6 @@ export const projects = [
     link: "https://rentalcarluxury.netlify.app/luxury",
   },
   {
-    id: 4,
-    title: "Premium Car Rental Agency Website",
-    des: "Online car booking platform with a user-friendly interface, secure payment gateway, and a wide selection of vehicles to choose from.",
-    img: "/modern-car-website.PNG",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://staticrentalcardemo.netlify.app/",
-  },
-  {
     id: 5,
     title: "Modern Online Car Rental Booking Platform",
     des: "Online car booking platform with a user-friendly interface, secure payment gateway, and a wide selection of vehicles to choose from.",
@@ -110,14 +111,7 @@ export const projects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "https://rentalcarluxury.netlify.app/classic",
   },
-  {
-    id: 6,
-    title: "Contevo AI - AI SaaS Content Tools",
-    des: "A real Saas web application with AI content tools features and a payments and credits system using the latest tech stack.",
-    img: "/ai-content-tools.PNG",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://contevo-ai.netlify.app/",
-  },
+  
   {
     id: 7,
     title: "Digital Marketing Management Platform",
@@ -128,11 +122,27 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Ai Resume Builder SaaS",
-    des: "Modern ai generation tool SaaS built with Next.js frontend and Node.js backend that enables users to create resumes using AI.",
+    title: "AI Resume Builder Landing Page",
+    des: "A modern, responsive landing page designed for an AI-powered resume generation tool, showcasing features and a sleek interface.",
     img: "/ai-resume-builder.PNG",
     iconLists: ["/laravel.svg", "/php.svg", "/mysql.svg", "/javascript.svg"],
     link: "https://resumer-builder-ai.netlify.app/",
+  },
+  {
+    id: 4,
+    title: "Premium Car Rental Landing Page",
+    des: "A modern and responsive landing page designed for a premium car rental agency, featuring a clean UI and engaging layout.",
+    img: "/modern-car-website.PNG",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "https://staticrentalcardemo.netlify.app/",
+  },
+  {
+    id: 1,
+    title: "AI Generation Tools Landing Page",
+    des: "A visually striking landing page for an AI generation tool SaaS, designed to showcase image and video creation features.",
+    img: "/ai-generation-saas-tools.PNG",
+    iconLists: ["/next.svg","/re.svg", "/tail.svg", "/c.svg"],
+    link: "https://atlas-ai-generation.netlify.app/",
   },
 ];
 
