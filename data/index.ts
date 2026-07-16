@@ -211,19 +211,48 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "I assisted in building a web-based platform with React.js and Redux, incorporating API integrations that enhanced user interactivity by 45%. I integrated RESTful APIs for seamless service communication, optimized application performance, and created technical documentation while collaborating on team project management",
+    title: "Freelance Software Engineer, Niche Agency",
+    desc: [
+      "Scaled traffic capability to 1,000+ daily active users using NestJS, Next.js, and PostgreSQL monolith architecture.",
+      "• Fixed REST API speed delays by implementing background workers via BullMQ for invoices and email delivery.",
+      "• Reduced database latency by 60% using a Redis caching layer and WebSocket real-time chat.",
+      "• Secured infrastructure against attacks by designing an API Gateway featuring custom rate-limiting algorithms."
+    ],
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Full Stack Developer Intern",
+    title: "Frontend Developer, Fantastic Food Delivery",
     desc: [
-      "I designed and developed user interfaces using Vue.js and Laravel, improving application performance by 30%. I focused on user experience, integrated RESTful APIs, implemented Pinia Store for state management, optimized MySQL databases, and configured automated CI/CD pipelines with Docker.",
+      "• Decreased client page load times by 35% by optimizing rendering performance in React.",
+      "• Upgraded backend data communication by writing frontend services to directly call new API v2 endpoints.",
+      "• Improved application production stability by debugging over 20 complex user-interface issues and bottlenecks."
     ],
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
+  },
+  {
+    id: 3,
+    title: "Frontend Developer, Dar Digital Agency",
+    desc: [
+      "Accelerated feature developement speeds by isolating business logic using MVC architecture with Controllers, Services, and Repositories pattern within a Vue.js/Laravel stack.",
+      "• Eliminated team environment configuration drift by containerizing the local development workflow using Docker.",
+      "• Enhanced front-to-back data accuracy by developing Vue.js interfaces to fetch and consume Laravel REST API endpoints."
+    ],
+    className: "md:col-span-2",
+    thumbnail: "/exp3.svg",
+  },
+  {
+    id: 4,
+    title: "Full-Stack Developer, Auva Digital Marketing",
+    desc: [
+      "Automated client onboarding workflows by building a live Full-Stack MVP application via secure Laravel REST APIs.",
+      "• Simplified project management tracking by designing an admin dashboard using relational MySQL databases.",
+      "• Enforced codebase maintainability by structuring the full-stack architecture using Model-ViewController patterns in Laravel."
+    ],
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
   },
 ];
 
